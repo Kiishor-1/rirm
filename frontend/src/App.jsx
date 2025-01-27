@@ -43,14 +43,19 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/verify-email" element={<VerifyEmail />} />
-        <Route path="/dashboard" element={<RecruiterBoard />}>
-          <Route index element={<UserJobs />} />
-          <Route path="new" element={<AddJob />} />
-          <Route path="jobs/:id/edit" element={<EditJob />} />
-          <Route path="jobs/:id/view" element={<ShowJob />} />
-          <Route path="send-alert" element={<JobAlertForm />} />
-          <Route path="applications" element={<JobApplications />} />
-        </Route>
+        {
+          role === 'Recruiter' &&
+          <>
+            <Route path="/dashboard" element={<RecruiterBoard />}>
+              <Route index element={<UserJobs />} />
+              <Route path="new" element={<AddJob />} />
+              <Route path="jobs/:id/edit" element={<EditJob />} />
+              <Route path="jobs/:id/view" element={<ShowJob />} />
+              <Route path="send-alert" element={<JobAlertForm />} />
+              <Route path="applications" element={<JobApplications />} />
+            </Route>
+          </>
+        }
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
