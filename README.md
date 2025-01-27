@@ -120,7 +120,7 @@ backend/
    MONGO_URI=mongodb://127.0.0.1:27017/jobfinder
    FRONT_ENDS=http://localhost:5173,http://localhost:5174
    PORT=8080
-   JWT_SECRET=theMeCore
+   JWT_SECRET=jwt_secret
    MAIL_HOST=smtp.gmail.com
    MAIL_USER=your-email@gmail.com
    MAIL_PASS=your-email-password
