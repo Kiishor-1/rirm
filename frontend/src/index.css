@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: "DM Sans";
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#add_job_form::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgb(5, 82, 108);
+}
+
+#add_job_form::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+#edit_job_form::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgb(5, 82, 108);
+}
+
+#edit_job_form::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        width: 95%;
+    }
+}
+@media screen and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+}
+
+
+@layer utilities {
+    .hideScroll::-webkit-scrollbar {
+        width: 8px;
+        display: none;
+    }
+
+    .hideScroll::-webkit-scrollbar-thumb {
+        background-color: #6b7280;
+        border-radius: 9999px;
+    }
+
+    .hideXScroll::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .hideXScroll::-webkit-scrollbar-thumb {
+        background-color: #6b7280;
+        border-radius: 120px;
+    }
+}
